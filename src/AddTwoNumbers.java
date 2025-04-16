@@ -2,15 +2,16 @@ import utils.ListNode;
 
 class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        int resultToPowerTen = getNumberSummation(l1) + getNumberSummation(l2);
+        long resultToPowerTen = getNumberSummation(l1) + getNumberSummation(l2);
+        System.out.println(getNumberSummation(l2));
         ListNode resultList = formArrayList(resultToPowerTen);
-        System.out.println(resultToPowerTen);
-        return l1;
+        return resultList;
     }
 
-    int getNumberSummation(ListNode nodeHead){
+    long getNumberSummation(ListNode nodeHead) {
         ListNode currentNode = nodeHead;
-        int result = 0, exponent = 0;
+        long result = 0;
+        int exponent = 0;
 
         while (currentNode != null) {
             result += currentNode.val * Math.pow(10, exponent);
@@ -21,17 +22,16 @@ class AddTwoNumbers {
         return result;
     }
 
-    ListNode formArrayList(int n) {
+    ListNode formArrayList(long n) {
         ListNode resultList = new ListNode();
-        resultList.val = n % 10;
-        ListNode currNode = new ListNode();
-        resultList.next = currNode;
+        resultList.val = (int)(n % 10);
         n /= 10;
+        ListNode currNode = resultList;
 
         while (n != 0) {
-            currNode.val = n % 10;
             currNode.next = new ListNode();
             currNode = currNode.next;
+            currNode.val = (int)(n % 10);
             n /= 10;
         }
 

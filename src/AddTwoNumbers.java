@@ -2,39 +2,38 @@ import utils.ListNode;
 
 class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        long resultToPowerTen = getNumberSummation(l1) + getNumberSummation(l2);
-        System.out.println(getNumberSummation(l2));
-        ListNode resultList = formArrayList(resultToPowerTen);
-        return resultList;
-    }
+        ListNode currNode1 = l1, currNode2 = l2, resultNode = new ListNode(), currNode = resultNode;
 
-    long getNumberSummation(ListNode nodeHead) {
-        ListNode currentNode = nodeHead;
-        long result = 0;
-        int exponent = 0;
+        int n, m, remainder = 0;
+        n = currNode1.val;
+        m = currNode2.val;
+        currNode.val = (n + m + remainder) % 10;
+        remainder = (n + m + remainder) / 10;
 
-        while (currentNode != null) {
-            result += currentNode.val * Math.pow(10, exponent);
-            currentNode = currentNode.next;
-            exponent++;
-        }
+        currNode1 = currNode1.next;
+        currNode2 = currNode2.next;
 
-        return result;
-    }
-
-    ListNode formArrayList(long n) {
-        ListNode resultList = new ListNode();
-        resultList.val = (int)(n % 10);
-        n /= 10;
-        ListNode currNode = resultList;
-
-        while (n != 0) {
+        while (currNode1 != null || currNode2 != null || remainder != 0) {
+            n = 0;
+            m = 0;
             currNode.next = new ListNode();
             currNode = currNode.next;
-            currNode.val = (int)(n % 10);
-            n /= 10;
+
+            if (currNode1 != null) {
+                n = currNode1.val;
+                currNode1 = currNode1.next;
+            }
+            if (currNode2 != null) {
+                m = currNode2.val;
+                currNode2 = currNode2.next;
+            }
+
+            currNode.val = (n + m + remainder) % 10;
+            remainder = (n + m + remainder) / 10;
+
         }
 
-        return resultList;
+        return resultNode;
+
     }
 }

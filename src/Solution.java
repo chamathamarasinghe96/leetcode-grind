@@ -1,5 +1,5 @@
 class Solution {
     public static void main(String[] args) {
-        System.out.println(new CheckParentheses().isValid("{[null]}"));
+        System.out.println(new CheckParentheses().isValid("{[]]}"));
     }
 }

@@ -1,5 +1,10 @@
+import helpers.ArrayListFunctions;
+
 class Solution {
     public static void main(String[] args) {
-        System.out.println(new CheckParentheses().isValid("{[]]}"));
+        int[] arr1 = {5};
+        int[] arr2 = {3};
+
+        ArrayListFunctions.printArrayList(new MergeTwoSortedLists().mergeTwoLists(ArrayListFunctions.populateArrayList(arr1), ArrayListFunctions.populateArrayList(arr2)));;
     }
 }

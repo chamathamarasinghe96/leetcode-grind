@@ -1,10 +1,10 @@
-import helpers.ArrayListFunctions;
-
 class Solution {
     public static void main(String[] args) {
-        int[] arr1 = {5};
-        int[] arr2 = {3};
+        int[] nums = {0,0,1,1,1,2,2,3,3,4};
 
-        ArrayListFunctions.printArrayList(new MergeTwoSortedLists().mergeTwoLists(ArrayListFunctions.populateArrayList(arr1), ArrayListFunctions.populateArrayList(arr2)));;
+        System.out.println(new RemoveDuplicates().removeDuplicates(nums));
+
+        RemoveDuplicates.printArray(nums);
+
     }
 }

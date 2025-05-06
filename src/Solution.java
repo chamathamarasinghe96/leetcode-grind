@@ -1,10 +1,12 @@
+import helpers.ArrayFunctions;
+
 class Solution {
     public static void main(String[] args) {
-        int[] nums = {0,0,1,1,1,2,2,3,3,4};
+        int[] nums = {3,2,2,3};
+        int val = 3;
 
-        System.out.println(new RemoveDuplicates().removeDuplicates(nums));
+        System.out.println(new RemoveElements().removeElement(nums, val));
 
-        RemoveDuplicates.printArray(nums);
-
+        ArrayFunctions.printArray(nums);
     }
 }

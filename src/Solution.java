@@ -1,8 +1,8 @@
 class Solution {
     public static void main(String[] args) {
-        String haystack = "leetcode";
-        String needle = "leeto";
+        int[] nums = {1,3,5,6};
+        int target = 7;
 
-        System.out.println(new FindFirstNeedleInHeystack().strStr(haystack, needle));
+        System.out.println(new SearchInsertPosition().searchInsert(nums, target));
     }
 }

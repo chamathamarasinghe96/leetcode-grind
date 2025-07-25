@@ -1,5 +1,5 @@
 public class MaxAvgSubArray {
-    public static int findMaxAvgSubArray(int[] nums, int k) {
+    public static double findMaxAvgSubArray(int[] nums, int k) {
         int maxSum = 0;
         for (int i = 0; i < nums.length - k; i++) {
             int sumSubArray = 0;
@@ -8,6 +8,6 @@ public class MaxAvgSubArray {
             }
             if (sumSubArray > maxSum) maxSum = sumSubArray;
         }
-        return maxSum;
+        return (double) maxSum / k;
     }
 }

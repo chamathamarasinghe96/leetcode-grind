@@ -3,6 +3,6 @@ class Solution {
         int slidingWindow = 4;
         int[] numbers = {1, 12, -5, -6, 50 , 3};
 
-        System.out.println(new MaxAvgSubArray().findMaxAvgSubArray(numbers, slidingWindow));
+        System.out.println(new MaxAvgSubArray().findMaxAvgWithSlidingWindowOptimized(numbers, slidingWindow));
     }
 }

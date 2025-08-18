@@ -3,6 +3,6 @@ class Solution {
         String s1 = "danger";
         String s2 = "garden";
 
-        System.out.println(AnagramStrings.checkIsAnagramMethod1(s1, s2));
+        System.out.println(AnagramStrings.checkIsAnagramMethod2(s1, s2));
     }
 }

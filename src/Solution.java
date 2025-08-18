@@ -1,8 +1,8 @@
 class Solution {
     public static void main(String[] args) {
-        int slidingWindow = 4;
-        int[] numbers = {1, 12, -5, -6, 50 , 3};
+        String s1 = "danger";
+        String s2 = "garden";
 
-        System.out.println(new MaxAvgSubArray().findMaxAvgWithSlidingWindowOptimized(numbers, slidingWindow));
+        System.out.println(AnagramStrings.checkIsAnagramMethod1(s1, s2));
     }
 }

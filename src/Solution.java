@@ -1,8 +1,11 @@
 class Solution {
     public static void main(String[] args) {
-        String s1 = "danger";
-        String s2 = "garden";
+        int[] arr = {};
+        int target = 6;
 
-        System.out.println(AnagramStrings.checkIsAnagramMethod2(s1, s2));
+        int[] result = FirstAndLastPosition.findFirstAndLastPosition(arr, target);
+        for (int i : result) {
+            System.out.println(i);
+        }
     }
 }
